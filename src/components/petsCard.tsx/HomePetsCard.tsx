@@ -1,8 +1,9 @@
 import { PetSchemaType } from '@/utils/schemas';
 import VerticalProductCard from './VerticalPetsCard';
+import { apiAddress } from '@/utils/variables';
 
 const HomePetsCard = async () => {
-  const data = await fetch('/api/pets', {
+  const data = await fetch(`${apiAddress}/api/pets`, {
     cache: 'no-store'
   });
   const pets: PetSchemaType[] = await data.json();
