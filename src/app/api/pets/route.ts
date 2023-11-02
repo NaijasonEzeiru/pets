@@ -13,6 +13,7 @@ export const GET = async () => {
       });
     return new NextResponse(JSON.stringify(allPets), { status: 201 });
   } catch (err) {
+    console.log(err);
     return new NextResponse(
       JSON.stringify({ err, message: 'Something went wrong' }),
       {
