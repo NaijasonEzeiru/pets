@@ -7,7 +7,8 @@ async function fetchPets() {
     cache: 'no-store'
   });
   if (!res.ok) return undefined;
-  return await res.json();
+  const data = await res.json();
+  return data;
 }
 
 const HomePetsCard = async () => {
