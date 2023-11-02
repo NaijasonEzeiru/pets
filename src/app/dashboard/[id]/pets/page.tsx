@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 import { type PetSchemaType } from '@/utils/schemas';
 
 async function fetchPet(id: string) {
-  const res = await fetch(`http://localhost:3000/api/users/${id}/pets`);
+  const res = await fetch(`/api/users/${id}/pets`);
   if (!res.ok) return undefined;
   return res.json();
 }

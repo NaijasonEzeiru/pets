@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
 async function fetchPet(id: string) {
-  const res = await fetch(`http://localhost:3000/api/users/${id}`);
+  const res = await fetch(`/api/users/${id}`);
   if (!res.ok) return undefined;
   return res.json();
 }

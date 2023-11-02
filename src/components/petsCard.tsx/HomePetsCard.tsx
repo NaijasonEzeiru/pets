@@ -2,7 +2,7 @@ import { PetSchemaType } from '@/utils/schemas';
 import VerticalProductCard from './VerticalPetsCard';
 
 const HomePetsCard = async () => {
-  const data = await fetch('http://localhost:3000/api/pets', {
+  const data = await fetch('/api/pets', {
     cache: 'no-store'
   });
   const pets: PetSchemaType[] = await data.json();

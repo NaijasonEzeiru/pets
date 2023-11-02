@@ -6,7 +6,7 @@ import { type PetSchemaType } from '@/utils/schemas';
 import ShowContact from '@/components/ShowContact';
 
 async function fetchPet(id: string) {
-  const res = await fetch(`http://localhost:3000/api/pets/${id}`);
+  const res = await fetch(`/api/pets/${id}`);
   if (!res.ok) return undefined;
   return res.json();
 }
